@@ -1,0 +1,22 @@
+{
+	"manifest_version": 2,
+	
+	
+	"name": "SFU Library Serial Costs",
+	"version": "0.0.0.1",
+
+	"description": "Extension to show cost of serials when viewing SFU Library Catalogue",
+	
+	"author": "Calvin Mah",
+	
+	"content_scripts": [
+		{
+			"matches": ["http://troy.lib.sfu.ca/*"],
+			"js": ["jquery-1.11.3.min.js","serialcosts.js"]
+		}
+	],
+	"permissions": [
+		"activeTab",
+		"http://api.lib.sfu.ca/*"
+	]
+}
