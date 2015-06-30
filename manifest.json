@@ -3,7 +3,7 @@
 	
 	
 	"name": "SFU Library Serial Costs",
-	"version": "0.0.0.1",
+	"version": "0.0.0.2",
 
 	"description": "Extension to show cost of serials when viewing SFU Library Catalogue",
 	
@@ -11,12 +11,14 @@
 	
 	"content_scripts": [
 		{
-			"matches": ["http://troy.lib.sfu.ca/*"],
+			"matches": ["http://troy.lib.sfu.ca/*","http://cufts2.lib.sfu.ca/CRDB4/BVAS/resource/*"],
 			"js": ["jquery-1.11.3.min.js","serialcosts.js"]
 		}
 	],
 	"permissions": [
 		"activeTab",
-		"http://api.lib.sfu.ca/*"
+		"http://api.lib.sfu.ca/*",
+		"http://cufts2.lib.sfu.ca/*",
+		"tabs"
 	]
 }
